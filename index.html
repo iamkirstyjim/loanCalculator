@@ -1,0 +1,65 @@
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- linking bootstrap to index.html-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+   <!-- import Athiti font from google fonts -->  
+   <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
+   <!-- importing font awesome icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- linking style.css to index.html --> 
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <!-- making sure that nav-bar collapse works --> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!-- linking script.css to index.html -->
+   <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<!-- The scrollable area -->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand scroll" href="#home"><span class="glyphicon glyphicon-usd"> Loan Calculator</span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home" class="scroll"><span class="glyphicon glyphicon-piggy-bank"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- body layout -->
+<div class="overall-container">
+  <div class="row">
+    
+    <!-- left side -->
+    <div class="cell-1" style="padding-left: 30px;">
+      <h1>Details</h1>
+      <div class="form-group">
+        <label for="usr"><h3>Loan Amount:</h3></label>
+        <input type="text" style="width:70%" class="form-control" id="loanAmount">
+      </div>
+      <div class="form-group">
+        <label for="pwd"><h3>How many years?</h3></label>
+        <input type="text" style="width:70%" class="form-control" id="loanPeriod">
+      </div>
+      <h4> As a test, interest rate by default is 6%. </h4>
+      <h4> No downpay taken into consideration. </h4>
+      <button class="button btn-primary" id="calculate"><h4>Calculate</h4></button>
+    </div>
+    
+    <!-- right side -->
+    <div class="cell cell-3 col-md-7">
+      <h1>Content</h1>
+      <h3> Total Interest Pay </h3>
+      <h4><div class="well" id="totalIntPay"></div></h4>
+      <h3> Monthly Pay <h3>
+      <h4><div class="well" id="monthlyPay"></div></h4>
+    </div>
+        
+  </div>
+</div>  
+</body>
